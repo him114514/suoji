@@ -34,8 +34,4 @@ if os.getcwd()!=file1 :
 else:
     main().start()
 
-            f2.write(read)        
-    main()        
-else:
-    main()
 
