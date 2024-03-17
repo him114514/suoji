@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="shinde">
+    <file>main.jpg</file>
+  </qresource>
+</RCC>
